@@ -247,6 +247,10 @@ the website, in dark theme
 
 /* Change background header */
 
+.scroll-header {
+    box-shadow: 0 1px 4px hsla(var(--hue), 4%, 15%, 0.1);
+}
+
 /* Active link */
 
 /*=============== HOME ===============*/
@@ -318,11 +322,191 @@ the website, in dark theme
 }
 /*=============== BUTTONS ===============*/
 
+.button {
+    display: inline-block;
+    background-color: var(--first-color);
+    color: #fff;
+    padding: 1rem 1.75rem;
+    border-radius: 0.5rem;
+    font-weight: var(--font-medium);
+    transition: 0.3s;
+}
+
+.button:hover {
+    background-color: var(--first-color-alt);
+}
+
+.button__icon {
+    transition: 0.3s;
+}
+
+.button:hover .button__icon {
+    transform: translateX(0.25rem);
+}
+
+.button--flex {
+    display: inline-flex;
+    align-items: center;
+    column-gap: 0.5rem;
+}
+
+.button--link {
+    color: var(--first-color);
+    font-weight: var(--font-medium);
+}
+
+.button--link:hover .button__icon {
+    transform: translateX(0.25rem);
+}
 /*=============== ABOUT ===============*/
+.about__container {
+    row-gap: 2rem;
+}
+
+.about__img {
+    width: 280px;
+    justify-self: center;
+}
+
+.about__title {
+    margin-bottom: var(--mb-1);
+}
+
+.about__description {
+    margin-bottom: var(--mb-2);
+}
+
+.about__details {
+    display: grid;
+    row-gap: 1rem;
+    margin-bottom: var(--mb-2-5);
+}
+
+.about__details-description {
+    display: inline-flex;
+    column-gap: 0.5rem;
+    font-size: var(--small-font-size);
+}
+
+.about__details-icon {
+    font-size: 1rem;
+    color: var(--first-color);
+    margin-top: 0.15rem;
+}
 
 /*=============== STEPS ===============*/
 
+.steps {
+}
+
+.steps__bg {
+    background-color: var(--first-color);
+    padding: 3rem 2rem 2rem;
+    border-radius: 1rem;
+}
+.section__title-center {
+}
+.steps__title {
+    color: #fff;
+}
+.steps__container {
+    gap: 2rem;
+    padding-top: 1rem;
+}
+.steps__card {
+    background-color: var(--container-color);
+    padding: 2.5rem 3rem 2rem 1.5rem;
+    border-radius: 1rem;
+}
+.steps__card-number {
+    display: inline-block;
+    background-color: var(--first-color-alt);
+    color: #fff;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.25rem;
+    font-size: var(--h2-font-size);
+    margin-bottom: var(--mb-1-5);
+    transition: 0.3s;
+}
+.steps__card-title {
+    font-size: var(--h3-font-size);
+    margin-bottom: var(--mb-0-5);
+}
+.steps__card-description {
+    font-size: var(--small-font-size);
+}
+
+.steps__card:hover .steps__card-number {
+    transform: translateY(-0.25rem);
+}
+
 /*=============== PRODUCTS ===============*/
+
+.product {
+}
+.product__description {
+    text-align: center;
+}
+.product__container {
+    padding: 3rem 0;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem 3rem;
+}
+.product__card {
+    display: grid;
+    position: relative;
+}
+
+.product__card:hover .product__img {
+    transform: translateY(-0.5rem);
+}
+
+.product__circle {
+    width: 90px;
+    height: 90px;
+    background-color: var(--first-color-lighten);
+    border-radius: 50%;
+    position: absolute;
+    top: 18%;
+    left: 5%;
+}
+.product__img {
+    position: relative;
+    width: 120px;
+    justify-self: center;
+    margin-bottom: var(--mb-0-75);
+    transition: 0.3s;
+}
+.product__title,
+.product__price {
+    font-size: var(--small-font-size);
+    nav-down: var(--font-semi-bold);
+    color: var(--title-color);
+}
+
+.product__title {
+    margin-bottom: 0.25rem;
+}
+.product__price {
+}
+.button--flex {
+}
+.product__button {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: var(--first-color);
+    color: #fff;
+    padding: 0.25rem;
+    border-radius: 0.35rem;
+    font-size: 1.15rem;
+}
+
+.product__button:hover {
+    background-color: var(--first-color-alt);
+}
+.ri-shopping-bag-line {
+}
 
 /*=============== QUESTIONS ===============*/
 
