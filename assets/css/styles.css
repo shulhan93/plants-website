@@ -3,7 +3,8 @@
 
 /*=============== VARIABLES CSS ===============*/
 :root {
-    --header-height: 3.5rem; /*56px*/
+    --header-height: 3.5rem;
+    /*56px*/
 
     /*========== Colors ==========*/
     /*Color mode HSL(hue, saturation, lightness)*/
@@ -83,7 +84,8 @@ body {
     margin: var(--header-height) 0 0 0;
     background-color: var(--body-color);
     color: var(--text-color);
-    transition: 0.4s; /*For animation dark mode*/
+    transition: 0.4s;
+    /*For animation dark mode*/
 }
 
 button {
@@ -148,7 +150,8 @@ the website, in dark theme
 }
 
 .main {
-    overflow: hidden; /*For animation*/
+    overflow: hidden;
+    /*For animation*/
 }
 
 /*=============== HEADER ===============*/
@@ -320,6 +323,7 @@ the website, in dark theme
 .home__social-link:hover {
     transform: translateX(0.25rem);
 }
+
 /*=============== BUTTONS ===============*/
 
 .button {
@@ -358,6 +362,7 @@ the website, in dark theme
 .button--link:hover .button__icon {
     transform: translateX(0.25rem);
 }
+
 /*=============== ABOUT ===============*/
 .about__container {
     row-gap: 2rem;
@@ -405,15 +410,18 @@ the website, in dark theme
 .steps__title {
     color: #fff;
 }
+
 .steps__container {
     gap: 2rem;
     padding-top: 1rem;
 }
+
 .steps__card {
     background-color: var(--container-color);
     padding: 2.5rem 3rem 2rem 1.5rem;
     border-radius: 1rem;
 }
+
 .steps__card-number {
     display: inline-block;
     background-color: var(--first-color-alt);
@@ -424,10 +432,12 @@ the website, in dark theme
     margin-bottom: var(--mb-1-5);
     transition: 0.3s;
 }
+
 .steps__card-title {
     font-size: var(--h3-font-size);
     margin-bottom: var(--mb-0-5);
 }
+
 .steps__card-description {
     font-size: var(--small-font-size);
 }
@@ -441,11 +451,13 @@ the website, in dark theme
 .product__description {
     text-align: center;
 }
+
 .product__container {
     padding: 3rem 0;
     grid-template-columns: repeat(2, 1fr);
     gap: 2.5rem 3rem;
 }
+
 .product__card {
     display: grid;
     position: relative;
@@ -464,6 +476,7 @@ the website, in dark theme
     top: 18%;
     left: 5%;
 }
+
 .product__img {
     position: relative;
     width: 120px;
@@ -471,6 +484,7 @@ the website, in dark theme
     margin-bottom: var(--mb-0-75);
     transition: 0.3s;
 }
+
 .product__title,
 .product__price {
     font-size: var(--small-font-size);
@@ -510,6 +524,7 @@ the website, in dark theme
 .questions__content {
     transition: 0.3s;
 }
+
 .questions__container {
     gap: 1.5rem;
     padding: 1.5rem 0;
@@ -519,6 +534,7 @@ the website, in dark theme
     display: grid;
     row-gap: 1.5rem;
 }
+
 .questions__item {
     background-color: var(--container-color);
     border-radius: 0.25rem;
@@ -527,6 +543,7 @@ the website, in dark theme
 .questions__item:hover {
     box-shadow: 0 2px 8px hsla(var(--hue), 4%, 15%, 0.15);
 }
+
 .questions__header {
     display: flex;
     align-items: center;
@@ -539,14 +556,17 @@ the website, in dark theme
     font-size: 1.25rem;
     color: var(--title-color);
 }
+
 .questions__item-title {
     font-size: var(--small-font-size);
     font-weight: var(--font-medium);
 }
+
 .questions__content {
     overflow: hidden;
     height: 0;
 }
+
 .questions__description {
     font-size: var(--smaller-font-size);
     padding: 0 1.25rem 1.25rem 2.5rem;
@@ -569,10 +589,91 @@ the website, in dark theme
 }
 
 /*=============== CONTACT ===============*/
+.contact__container {
+    row-gap: 3.5rem;
+}
+
+.contact__data {
+    display: grid;
+    row-gap: 2rem;
+}
+
+.contact__subtitle {
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+    color: var(--text-color);
+    margin-bottom: var(--mb-0-5);
+}
+
+.contact__description {
+    display: inline-flex;
+    align-items: center;
+    column-gap: .5rem;
+    color: var(--title-color);
+    font-weight: var(--font-medium);
+}
+
+.contact__icon {
+    font-size: 1.25rem;
+}
+
+.contact__inputs {
+    display: grid;
+    row-gap: 2rem;
+    margin-bottom: var(--mb-2-5);
+}
+
+.contact__content {
+    position: relative;
+    height: 3rem;
+    border-bottom: 1px solid var(--text-color-light);
+}
+
+.contact__input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 1rem 1rem 1rem 0;
+    background: none;
+    color: var(--text-color);
+    border: none;
+    outline: none;
+    z-index: 1;
+}
+
+.contact__label {
+    position: absolute;
+    top: 0.75rem;
+    width: 100%;
+    font-size: var(--small-font-size);
+    color: var(--text-color-light);
+    transition: .3s;
+}
+
+.contact__area {
+    height: 7rem;
+}
+
+.contact__area textarea {
+    resize: none;
+}
 
 /*Input focus move up label*/
+.contact__input:focus+.contact__label {
+    top: -.75rem;
+    left: 0;
+    font-size: var(--small-font-size);
+    z-index: 10;
+}
 
 /*Input focus sticky top label*/
+.contact__input:not(:placeholder-shown).contact__input:not(:focus)+.contact__label {
+    top: -.75rem;
+    font-size: var(--small-font-size);
+    z-index: 10;
+}
 
 /*=============== FOOTER ===============*/
 
