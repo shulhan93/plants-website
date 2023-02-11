@@ -99,6 +99,17 @@ function scrollUp() {
     else scrollUp.classList.remove("show-scroll");
 }
 window.addEventListener("scroll", scrollUp);
+function pageToTop(e){
+    const btnUp = document.getElementById('scroll-up')
+    if(e.target.closest('#scroll-up') != btnUp) {
+        return
+    }
+
+   window.scrollTo(0,0)
+   e.preventDefault()
+
+}
+window.addEventListener('click', pageToTop)
 
 /*=============== DARK LIGHT THEME ===============*/
 const themeButton = document.getElementById("theme-button");

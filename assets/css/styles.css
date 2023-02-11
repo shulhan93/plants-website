@@ -255,6 +255,20 @@ the website, in dark theme
 }
 
 /* Active link */
+.active-link {
+    position: relative;
+    color: var(--first-color);
+}
+
+.active-link::after {
+    content: '';
+    position: absolute;
+    bottom: -0.5rem;
+    left: 0;
+    width: 50%;
+    height: 2px;
+    background-color: var(--first-color);
+}
 
 /*=============== HOME ===============*/
 .home {
@@ -773,8 +787,34 @@ the website, in dark theme
 }
 
 /*=============== SCROLL UP ===============*/
+.scrollup {
+    position: fixed;
+    background-color: var(--first-color);
+    right: 1rem;
+    bottom: -30%;
+    display: inline-flex;
+    padding: 0.5rem;
+    border-radius: .25rem;
+    z-index: var(--z-tooltip);
+    opacity: .8;
+    transition: .4s;
+}
+
+.scrollup__icon {
+    font-size: 1rem;
+    color: #fff;
+}
+
+.scrollup::hover {
+    background-color: var(--first-color-alt);
+    opacity: 1;
+}
 
 /* Show Scroll Up*/
+
+.show-scroll {
+    bottom: 3rem;
+}
 
 /*=============== SCROLL BAR ===============*/
 
