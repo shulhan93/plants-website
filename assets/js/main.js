@@ -104,7 +104,6 @@ function pageToTop(e){
     if(e.target.closest('#scroll-up') != btnUp) {
         return
     }
-
    window.scrollTo(0,0)
    e.preventDefault()
 
